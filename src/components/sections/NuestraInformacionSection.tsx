@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Users, Landmark, Building2, Network, Award, FlaskConical, Handshake, Globe, UsersRound, CheckCircle } from 'lucide-react';
 
 const topNavItems = [
-  { title: 'Autoridades', icon: <Users className="h-8 w-8 text-primary" />, href: '#' },
+  { title: 'Autoridades', icon: <Users className="h-8 w-8 text-primary" />, href: '/nuestra-informacion/autoridades' },
   { title: 'Consejo de Facultad', icon: <Landmark className="h-8 w-8 text-primary" />, href: '#' },
   { title: 'Infraestructura', icon: <Building2 className="h-8 w-8 text-primary" />, href: '#' },
   { title: 'Organigrama', icon: <Network className="h-8 w-8 text-primary" />, href: '#' },

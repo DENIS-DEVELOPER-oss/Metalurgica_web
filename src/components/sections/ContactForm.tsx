@@ -1,10 +1,12 @@
+
 "use client";
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useActionState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useEffect } from 'react';
+// Removed unused import: import type { useFormStatus } from 'react-dom'; 
 
 import { submitContactForm, type ContactFormState } from '@/app/actions';
 import { Button } from "@/components/ui/button";
@@ -13,6 +15,9 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+
+// Need to import useFormStatus from react-dom for the SubmitButton
+import { useFormStatus as useDomFormStatus } from 'react-dom';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -24,7 +29,7 @@ const contactFormSchema = z.object({
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 function SubmitButton() {
-  const { pending } = useFormStatus();
+  const { pending } = useDomFormStatus();
   return (
     <Button type="submit" disabled={pending} className="w-full bg-accent hover:bg-accent/90 text-accent-foreground">
       {pending ? 'Sending...' : 'Send Message'}
@@ -34,7 +39,7 @@ function SubmitButton() {
 
 export default function ContactForm() {
   const { toast } = useToast();
-  const [state, formAction] = useFormState<ContactFormState, FormData>(submitContactForm, {
+  const [state, formAction] = useActionState<ContactFormState, FormData>(submitContactForm, {
     message: "",
     success: false,
   });
@@ -56,7 +61,7 @@ export default function ContactForm() {
           title: "Success!",
           description: state.message,
         });
-        form.reset(); // Reset form on success
+        form.reset(); 
       } else {
         toast({
           title: "Error",
@@ -66,7 +71,6 @@ export default function ContactForm() {
       }
     }
   }, [state, toast, form]);
-
 
   return (
     <Card className="w-full max-w-2xl shadow-xl">
@@ -78,9 +82,9 @@ export default function ContactForm() {
         <form action={formAction} className="space-y-6">
           <div>
             <Label htmlFor="name">Full Name</Label>
-            <Input 
-              id="name" 
-              name="name" 
+            <Input
+              id="name"
+              name="name"
               type="text"
               {...form.register("name")}
               aria-invalid={form.formState.errors.name || state.errors?.name ? "true" : "false"}
@@ -91,9 +95,9 @@ export default function ContactForm() {
 
           <div>
             <Label htmlFor="email">Email Address</Label>
-            <Input 
-              id="email" 
-              name="email" 
+            <Input
+              id="email"
+              name="email"
               type="email"
               {...form.register("email")}
               aria-invalid={form.formState.errors.email || state.errors?.email ? "true" : "false"}
@@ -104,9 +108,9 @@ export default function ContactForm() {
 
           <div>
             <Label htmlFor="subject">Subject</Label>
-            <Input 
-              id="subject" 
-              name="subject" 
+            <Input
+              id="subject"
+              name="subject"
               type="text"
               {...form.register("subject")}
               aria-invalid={form.formState.errors.subject || state.errors?.subject ? "true" : "false"}
@@ -117,10 +121,9 @@ export default function ContactForm() {
 
           <div>
             <Label htmlFor="message">Message</Label>
-            <Textarea 
-              id="message" 
-              name="message" 
-              rows={5}
+            <Textarea
+              id="message"
+              name="message"
               {...form.register("message")}
               aria-invalid={form.formState.errors.message || state.errors?.message ? "true" : "false"}
             />
@@ -128,7 +131,9 @@ export default function ContactForm() {
             {state.errors?.message && <p className="text-sm text-destructive mt-1">{state.errors.message[0]}</p>}
           </div>
           
-          {state.errors?._form && <p className="text-sm font-medium text-destructive">{state.errors._form[0]}</p>}
+          {state.errors?._form && (
+            <p className="text-sm font-medium text-destructive">{state.errors._form[0]}</p>
+          )}
 
           <SubmitButton />
         </form>

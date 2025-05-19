@@ -5,21 +5,21 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
 
 const navLinks = [
-  { href: "#nuestra-informacion", label: "Nuestra Información" },
-  { href: "#escuela-profesional", label: "Escuela Profesional" },
-  { href: "#oferta-educativa", label: "Oferta Educativa" },
-  { href: "#investigacion-servicios", label: "Investigación y Servicios" },
-  { href: "#responsabilidad-social", label: "Responsabilidad Social" },
-  { href: "#gestion-ambiental", label: "Gestión Ambiental" },
-  { href: "#acreditacion-icacit", label: "Acreditación ICACIT" },
-  { href: "#grados-titulos", label: "Grados y Titulos" },
+  { href: "/nuestra-informacion", label: "Nuestra Información" },
+  { href: "/escuela-profesional", label: "Escuela Profesional" },
+  { href: "/oferta-educativa", label: "Oferta Educativa" },
+  { href: "/investigacion-servicios", label: "Investigación y Servicios" },
+  { href: "/responsabilidad-social", label: "Responsabilidad Social" },
+  { href: "/gestion-ambiental", label: "Gestión Ambiental" },
+  { href: "/acreditacion-icacit", label: "Acreditación ICACIT" },
+  { href: "/grados-titulos", label: "Grados y Titulos" },
 ];
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-card"> {/* Removed backdrop-blur, using bg-card */}
-      <div className="container flex h-20 items-center justify-between px-4 md:px-6"> {/* Increased height to h-20 */}
-        <Link href="/" className="flex items-center space-x-2 mr-4"> {/* Adjusted spacing and margin */}
+    <header className="sticky top-0 z-40 w-full border-b bg-card">
+      <div className="container flex h-20 items-center justify-between px-4 md:px-6">
+        <Link href="/" className="flex items-center space-x-2 mr-4">
           <Image 
             src="https://placehold.co/50x50.png" 
             alt="Logo EPIM" 
@@ -34,12 +34,12 @@ export default function Header() {
           </div>
         </Link>
         
-        <nav className="hidden items-center space-x-1 text-xs font-normal md:flex lg:space-x-1.5 xl:space-x-2"> {/* Adjusted spacing and font */}
+        <nav className="hidden items-center space-x-1 text-xs font-normal md:flex lg:space-x-1.5 xl:space-x-2">
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
               href={link.href} 
-              className="transition-colors hover:text-accent px-1.5 py-1 lg:px-2 whitespace-nowrap" // Added padding for better spacing
+              className="transition-colors hover:text-accent px-1.5 py-1 lg:px-2 whitespace-nowrap"
             >
               {link.label}
             </Link>
@@ -53,7 +53,7 @@ export default function Header() {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="w-[280px] sm:w-[320px]"> {/* Adjusted width for mobile */}
+          <SheetContent side="right" className="w-[280px] sm:w-[320px]">
             <nav className="grid gap-4 text-base font-medium p-6">
               <Link href="/" className="flex items-center space-x-2 mb-4">
                 <Image 

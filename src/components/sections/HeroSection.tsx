@@ -23,10 +23,10 @@ export default function HeroSection() {
         </p>
         <div className="mt-10 flex justify-center space-x-4">
           <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="#graduados">NUESTROS GRADUADOS</Link>
+            <Link href="/graduados">NUESTROS GRADUADOS</Link>
           </Button>
           <Button asChild size="lg" variant="secondary">
-            <Link href="#contact">CONTÁCTANOS</Link>
+            <Link href="/contactanos">CONTÁCTANOS</Link>
           </Button>
         </div>
       </div>

@@ -22,8 +22,8 @@
     --muted: 210 17% 85%; /* #D4D8DC */
     --muted-foreground: 210 10% 45%; /* #666F7A */
 
-    --accent: 26 100% 40%; /* #CC5500 burnt orange */
-    --accent-foreground: 0 0% 98%; /* #FAFAFA white */
+    --accent: 48 98% 50%; /* #FEEA00 yellow */
+    --accent-foreground: 210 10% 23%; /* #333A40 dark gray */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -35,7 +35,7 @@
     --radius: 0.5rem;
 
     --chart-1: 210 25% 31%;
-    --chart-2: 26 100% 40%;
+    --chart-2: 48 98% 50%; /* Updated to new accent */
     --chart-3: 210 10% 23%;
     --chart-4: 210 17% 90%;
     --chart-5: 210 17% 85%;
@@ -69,18 +69,18 @@
     --muted: 210 10% 25%; /* #353C45 */
     --muted-foreground: 210 17% 65%; /* #98A1AD */
 
-    --accent: 26 100% 60%; /* #FF8833 */
-    --accent-foreground: 210 10% 15%;
+    --accent: 48 98% 55%; /* Brighter yellow for dark mode */
+    --accent-foreground: 210 10% 15%; /* Darker text for yellow button */
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 210 10% 25%; /* #353C45 */
     --input: 210 10% 22%; /* #2E353D */
-    --ring: 26 100% 60%; /* Burnt orange for rings in dark mode */
+    --ring: 48 98% 55%; /* Yellow for rings in dark mode */
     
     --chart-1: 210 25% 65%;
-    --chart-2: 26 100% 60%;
+    --chart-2: 48 98% 55%; /* Updated to new accent */
     --chart-3: 210 17% 90%;
     --chart-4: 210 10% 20%;
     --chart-5: 210 10% 25%;
@@ -92,7 +92,7 @@
     --sidebar-accent: 210 10% 20%;
     --sidebar-accent-foreground: 210 17% 90%;
     --sidebar-border: 210 10% 25%;
-    --sidebar-ring: 26 100% 60%;
+    --sidebar-ring: 48 98% 55%;
   }
 }
 

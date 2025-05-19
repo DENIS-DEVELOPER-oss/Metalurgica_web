@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import TopBar from '@/components/layout/TopBar';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster";
@@ -16,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'ForgeNext - Excellence in Metalwork',
-  description: 'Custom metal fabrication, design, and engineering solutions by ForgeNext.',
+  title: 'Escuela Profesional de Ingeniería Metalúrgica', // Updated Title
+  description: 'Formando líderes en la ciencia, tecnología e innovación de materiales metálicos y sus aplicaciones industriales.', // Updated Description
 };
 
 export default function RootLayout({
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+        <TopBar />
         <Header />
         <main className="flex-grow">
           {children}

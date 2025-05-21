@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetTrigger, SheetContent } from '@/components/ui/sheet';
+import { Sheet, SheetTrigger, SheetContent, SheetHeader, SheetTitle } from '@/components/ui/sheet';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
@@ -14,7 +14,7 @@ const navLinks = [
   { href: "/investigacion-servicios", label: "Investigación y Servicios" },
   { href: "/responsabilidad-social", label: "Responsabilidad Social" },
   { href: "/gestion-ambiental", label: "Gestión Ambiental" },
-  { href: "/acreditacion-icacit", label: "Acreditación ICACIT" }, // Assuming this was 'acreditacion.html'
+  { href: "/acreditacion-icacit", label: "Acreditación ICACIT" },
   { href: "/grados-titulos", label: "Grados y Titulos" },
 ];
 
@@ -42,9 +42,9 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center">
             <Image 
-              src="https://placehold.co/100x64.png?text=Logo" // Placeholder for images/meta.png
+              src="https://placehold.co/100x64.png?text=Logo"
               alt="Logo EPIM" 
-              width={100} // Adjusted placeholder size
+              width={100}
               height={64}
               className="h-16 w-auto mr-4"
               data-ai-hint="university logo"
@@ -63,7 +63,10 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[320px] bg-card p-6">
-              <nav className="flex flex-col space-y-4 mt-4 pb-4 border-b border-border">
+              <SheetHeader className="mb-4 pb-4 border-b border-border">
+                <SheetTitle className="text-lg font-semibold text-primary">Navegación Principal</SheetTitle>
+              </SheetHeader>
+              <nav className="flex flex-col space-y-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}

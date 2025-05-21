@@ -6,7 +6,7 @@ import { Target, GraduationCap, UserCheck, BookOpen, Star, FlaskConical, Handsha
 
 const navItems = [
   { title: 'Misión y Visión', icon: <Target className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />, href: '/escuela-profesional/mision-vision', bgColor: 'bg-blue-100', textColor: 'text-blue-700', hoverBgColor: 'hover:bg-blue-200' },
-  { title: 'Objetivos Educacionales', icon: <GraduationCap className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />, href: '#', bgColor: 'bg-green-100', textColor: 'text-green-700', hoverBgColor: 'hover:bg-green-200' },
+  { title: 'Objetivos Educacionales', icon: <GraduationCap className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />, href: '/escuela-profesional/objetivos-educacionales', bgColor: 'bg-green-100', textColor: 'text-green-700', hoverBgColor: 'hover:bg-green-200' },
   { title: 'Perfil del Egresado', icon: <UserCheck className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />, href: '#', bgColor: 'bg-yellow-100', textColor: 'text-yellow-700', hoverBgColor: 'hover:bg-yellow-200' },
   { title: 'Recursos', icon: <BookOpen className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />, href: '#', bgColor: 'bg-purple-100', textColor: 'text-purple-700', hoverBgColor: 'hover:bg-purple-200' },
 ];

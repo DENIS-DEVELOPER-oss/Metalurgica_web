@@ -1,32 +1,88 @@
+'use client';
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+
+const frases = [
+  "Formando los ingenieros del mañana",
+  "Forjando el futuro con innovación metalúrgica",
+  "Transformando minerales en soluciones avanzadas",
+  "Liderando la revolución de los materiales",
+  "Diseñando aleaciones para un mundo sostenible",
+  "Impulsando la industria con ciencia y creatividad"
+];
 
 export default function HeroSection() {
+  const [currentPhrase, setCurrentPhrase] = useState('');
+  const [phraseIndex, setPhraseIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const typeSpeed = isDeleting ? 50 : 100;
+    const phrase = frases[phraseIndex];
+
+    const handleTyping = () => {
+      if (isDeleting) {
+        if (charIndex > 0) {
+          setCurrentPhrase(phrase.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else {
+          setIsDeleting(false);
+          setPhraseIndex((prevIndex) => (prevIndex + 1) % frases.length);
+        }
+      } else {
+        if (charIndex < phrase.length) {
+          setCurrentPhrase(phrase.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else {
+          // Wait before deleting
+          setTimeout(() => setIsDeleting(true), 3000);
+        }
+      }
+    };
+
+    const timer = setTimeout(handleTyping, typeSpeed);
+    return () => clearTimeout(timer);
+  }, [charIndex, isDeleting, phraseIndex]);
+
   return (
-    <section className="relative w-full h-[calc(100vh-4rem)] flex items-center justify-center text-center text-white overflow-hidden">
+    <section className="relative w-full md:h-[700px] h-[50vh] flex items-center justify-center p-4 overflow-hidden">
       <Image
-        src="https://placehold.co/1920x1080.png"
-        alt="Paisaje montañoso al atardecer"
+        src="https://placehold.co/1920x1080.png?text=Fondo+Metalurgia" // Placeholder for images/fondo1.jpg
+        alt="Fondo Hero Metalurgia"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 z-0 opacity-40"
-        data-ai-hint="mountain landscape"
+        className="absolute inset-0 z-0" // Removed opacity-40 from previous version to match new HTML
+        data-ai-hint="mining geology abstract" // Updated hint
         priority
       />
-      <div className="relative z-10 p-4 md:p-6 bg-black/50 rounded-lg shadow-xl">
-        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-          Diseñando aleaciones
+      <div className="relative z-10 text-center bg-black bg-opacity-50 p-6 sm:p-8 rounded-lg max-w-xl w-full">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 h-20 sm:h-24 font-serif">
+          <span>{currentPhrase}</span>
+          <span className="animate-pulse">|</span>
         </h1>
-        <p className="mt-6 max-w-md mx-auto text-lg text-neutral-200 sm:text-xl md:mt-8 md:max-w-2xl">
-          Formando a los futuros líderes en la ciencia, tecnología e innovación de materiales metálicos y sus aplicaciones industriales.
-        </p>
-        <div className="mt-10 flex justify-center space-x-4">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            <Link href="/graduados">NUESTROS GRADUADOS</Link>
+        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+          <Button 
+            asChild 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-2 rounded text-sm sm:text-base"
+          >
+            <Link href="https://transparencia.unap.edu.pe/web/relacion-de-grados-y-titulos-2024/" target="_blank" rel="noopener noreferrer">
+              NUESTROS GRADUADOS
+            </Link>
           </Button>
-          <Button asChild size="lg" variant="secondary">
-            <Link href="/contactanos">CONTÁCTANOS</Link>
+          <Button 
+            asChild 
+            size="lg" 
+            variant="outline" 
+            className="text-gray-300 hover:text-white transition-colors border-gray-300 hover:border-white rounded px-6 py-2 text-sm sm:text-base bg-transparent hover:bg-transparent"
+          >
+            <Link href="/contactanos#contact-section"> {/* Updated to internal link if #contact-section is in contactanos page */}
+              CONTÁCTANOS
+            </Link>
           </Button>
         </div>
       </div>

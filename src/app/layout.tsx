@@ -1,24 +1,32 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Roboto, Merriweather } from 'next/font/google';
 import './globals.css';
 import TopBar from '@/components/layout/TopBar';
 import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/Footer'; // Assuming Footer will be adapted later
 import { Toaster } from "@/components/ui/toaster";
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const roboto = Roboto({
+  weight: ['400', '700'],
   subsets: ['latin'],
+  variable: '--font-roboto',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const merriweather = Merriweather({
+  weight: ['700'],
   subsets: ['latin'],
+  variable: '--font-merriweather',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
-  title: 'Escuela Profesional de Ingeniería Metalúrgica', // Updated Title
-  description: 'Formando líderes en la ciencia, tecnología e innovación de materiales metálicos y sus aplicaciones industriales.', // Updated Description
+  title: 'Escuela Profesional de Ingeniería Metalúrgica',
+  description: 'Formando líderes en la ciencia, tecnología e innovación de materiales metálicos y sus aplicaciones industriales.',
+  // Assuming favicon.ico will be placed in public folder
+  // icons: {
+  //   icon: '/favicon.ico', 
+  // },
 };
 
 export default function RootLayout({
@@ -27,14 +35,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+    <html lang="es" className={`${roboto.variable} ${merriweather.variable} h-full scroll-smooth`}>
+      <body className="flex flex-col min-h-screen bg-background text-foreground">
         <TopBar />
         <Header />
         <main className="flex-grow">
           {children}
         </main>
-        <Footer />
+        <Footer /> {/* Footer will be adapted later based on your HTML */}
         <Toaster />
       </body>
     </html>

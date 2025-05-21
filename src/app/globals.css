@@ -4,95 +4,117 @@
 
 @layer base {
   :root {
-    --background: 210 17% 95%; /* #F2F3F4 light gray */
-    --foreground: 210 10% 23%; /* #333A40 dark gray */
+    --background: 220 20% 97%; /* Corresponds to bg-gray-100 */
+    --foreground: 220 10% 23%; /* Dark gray for text */
 
-    --card: 210 17% 98%; /* #FAFAFB */
-    --card-foreground: 210 10% 23%;
+    --card: 0 0% 100%; /* White for cards */
+    --card-foreground: 220 10% 23%;
 
-    --popover: 210 17% 98%; /* #FAFAFB */
-    --popover-foreground: 210 10% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 23%;
 
-    --primary: 210 25% 31%; /* #34495E deep blue */
-    --primary-foreground: 210 17% 95%; /* #F2F3F4 light gray */
+    --primary: 224 76% 48%; /* Corresponds to text-blue-600 / bg-blue-600 */
+    --primary-foreground: 0 0% 100%; /* White text on primary */
 
-    --secondary: 210 17% 90%; /* #E0E2E5 */
-    --secondary-foreground: 210 25% 31%; /* #34495E deep blue */
+    --secondary: 210 17% 90%; /* Lighter gray for secondary elements */
+    --secondary-foreground: 220 25% 31%; /* Darker text on secondary */
 
-    --muted: 210 17% 85%; /* #D4D8DC */
-    --muted-foreground: 210 10% 45%; /* #666F7A */
+    --muted: 220 10% 65%; /* Muted gray */
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 48 98% 50%; /* #FEEA00 yellow */
-    --accent-foreground: 210 10% 23%; /* #333A40 dark gray */
+    --accent: 45 100% 51%; /* Corresponds to bg-yellow-400 */
+    --accent-foreground: 220 10% 15%; /* Dark text on accent */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 17% 88%; /* #DDE1E3 */
-    --input: 210 17% 92%; /* #E8EAEB */
-    --ring: 210 25% 31%; /* #34495E deep blue */
+    --border: 220 10% 88%; /* Border color */
+    --input: 220 10% 92%; /* Input background */
+    --ring: 224 76% 48%; /* Ring color (focus) */
 
     --radius: 0.5rem;
 
-    --chart-1: 210 25% 31%;
-    --chart-2: 48 98% 50%; /* Updated to new accent */
-    --chart-3: 210 10% 23%;
+    --chart-1: 224 76% 48%;
+    --chart-2: 45 100% 51%; 
+    --chart-3: 220 10% 23%;
     --chart-4: 210 17% 90%;
-    --chart-5: 210 17% 85%;
+    --chart-5: 220 10% 85%;
 
-    --sidebar-background: 210 17% 98%;
-    --sidebar-foreground: 210 10% 23%;
-    --sidebar-primary: 210 25% 31%;
-    --sidebar-primary-foreground: 210 17% 95%;
-    --sidebar-accent: 210 17% 90%;
-    --sidebar-accent-foreground: 210 25% 31%;
-    --sidebar-border: 210 17% 88%;
-    --sidebar-ring: 210 25% 31%;
+    /* Specific for the new design */
+    --top-bar-bg: 220 13% 25%; /* bg-gray-800 */
+    --top-bar-text: 0 0% 100%; /* text-white */
+    --top-bar-hover-text: 45 100% 60%; /* hover:text-yellow-300 */
+
+    --header-text-muted: 220 10% 40%; /* text-gray-600 for "Escuela Profesional de" */
+    --header-text-bold: 220 13% 25%; /* text-gray-800 for "Ingeniería Metalúrgica" */
+    --nav-text: 220 10% 47%; /* text-gray-700 for nav links */
+    --nav-hover-text: 224 76% 52%; /* hover:text-blue-600 for nav links */
+    
+    --font-sans: "Roboto", sans-serif;
+    --font-serif: "Merriweather", serif;
+
+    --sidebar-background: 0 0% 100%; /* Assuming sidebar is white */
+    --sidebar-foreground: 220 10% 23%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 94%;
+    --sidebar-accent-foreground: 220 10% 23%;
+    --sidebar-border: 220 10% 88%;
+    --sidebar-ring: 224 76% 48%;
   }
 
   .dark {
-    --background: 210 10% 15%; /* #1F242A */
-    --foreground: 210 17% 90%; /* #E0E2E5 */
+    --background: 220 10% 10%; /* Dark background */
+    --foreground: 220 15% 90%; /* Light text */
 
-    --card: 210 10% 12%; /* #1A1E23 */
-    --card-foreground: 210 17% 90%;
+    --card: 220 10% 15%; 
+    --card-foreground: 220 15% 90%;
 
-    --popover: 210 10% 12%;
-    --popover-foreground: 210 17% 90%;
+    --popover: 220 10% 15%;
+    --popover-foreground: 220 15% 90%;
 
-    --primary: 210 25% 65%; /* #7F94AA */
-    --primary-foreground: 210 10% 15%;
+    --primary: 224 70% 60%; /* Lighter blue for dark mode */
+    --primary-foreground: 220 10% 10%;
 
-    --secondary: 210 10% 20%; /* #2A3037 */
-    --secondary-foreground: 210 17% 90%;
+    --secondary: 220 10% 20%; 
+    --secondary-foreground: 220 15% 90%;
 
-    --muted: 210 10% 25%; /* #353C45 */
-    --muted-foreground: 210 17% 65%; /* #98A1AD */
+    --muted: 220 10% 30%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 48 98% 55%; /* Brighter yellow for dark mode */
-    --accent-foreground: 210 10% 15%; /* Darker text for yellow button */
+    --accent: 45 90% 55%; /* Slightly brighter yellow */
+    --accent-foreground: 220 10% 10%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 210 10% 25%; /* #353C45 */
-    --input: 210 10% 22%; /* #2E353D */
-    --ring: 48 98% 55%; /* Yellow for rings in dark mode */
+    --border: 220 10% 25%;
+    --input: 220 10% 22%;
+    --ring: 224 70% 60%;
     
-    --chart-1: 210 25% 65%;
-    --chart-2: 48 98% 55%; /* Updated to new accent */
-    --chart-3: 210 17% 90%;
-    --chart-4: 210 10% 20%;
-    --chart-5: 210 10% 25%;
+    --chart-1: 224 70% 60%;
+    --chart-2: 45 90% 55%;
+    --chart-3: 220 15% 90%;
+    --chart-4: 220 10% 20%;
+    --chart-5: 220 10% 30%;
 
-    --sidebar-background: 210 10% 12%;
-    --sidebar-foreground: 210 17% 90%;
-    --sidebar-primary: 210 25% 65%;
-    --sidebar-primary-foreground: 210 10% 15%;
-    --sidebar-accent: 210 10% 20%;
-    --sidebar-accent-foreground: 210 17% 90%;
-    --sidebar-border: 210 10% 25%;
-    --sidebar-ring: 48 98% 55%;
+    --top-bar-bg: 220 10% 12%; 
+    --top-bar-text: 220 15% 85%; 
+    --top-bar-hover-text: 45 85% 60%;
+
+    --header-text-muted: 220 10% 60%; 
+    --header-text-bold: 220 15% 90%;
+    --nav-text: 220 15% 80%; 
+    --nav-hover-text: 224 65% 65%;
+
+    --sidebar-background: 220 10% 15%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 224 70% 60%;
+    --sidebar-primary-foreground: 220 10% 10%;
+    --sidebar-accent: 220 10% 25%;
+    --sidebar-accent-foreground: 220 15% 90%;
+    --sidebar-border: 220 10% 30%;
+    --sidebar-ring: 224 70% 60%;
   }
 }
 
@@ -101,6 +123,32 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .hover-underline-animation {
+    position: relative;
+    display: inline-block;
+  }
+  .hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(var(--primary)); /* Use primary color from theme */
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 }

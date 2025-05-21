@@ -4,25 +4,24 @@ import { Button } from '@/components/ui/button';
 
 export default function TopBar() {
   return (
-    <div className="bg-primary text-primary-foreground">
-      <div className="container mx-auto flex h-10 items-center justify-between px-4 md:px-6 text-xs">
-        <div className="flex items-center space-x-4">
-          <div className="flex items-center space-x-1">
-            <Phone className="h-4 w-4" />
-            <a href="tel:+51950942064" className="hover:underline">+51 950 942 064</a>
-          </div>
-          <div className="flex items-center space-x-1">
-            <Mail className="h-4 w-4" />
-            <a href="mailto:EChavez@unap.edu.pe" className="hover:underline">EChavez@unap.edu.pe</a>
-          </div>
+    <div className="bg-top-bar text-top-bar-foreground py-4 px-2 sm:px-4">
+      <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm">
+        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-0">
+          <a href="tel:+51950942064" className="flex items-center hover:text-top-bar-hover transition duration-300">
+            <Phone className="h-4 w-4 mr-1" />
+            <span className="hover:underline">+51 950 942 064</span>
+          </a>
+          <a href="mailto:EChavez@unap.edu.pe" className="flex items-center hover:text-top-bar-hover transition duration-300">
+            <Mail className="h-4 w-4 mr-1" />
+            <span className="hover:underline">EChavez@unap.edu.pe</span>
+          </a>
         </div>
-        <Button 
-          size="sm" 
-          className="bg-accent hover:bg-accent/90 text-accent-foreground rounded-md h-7 px-3 text-xs"
+        <Button
+          className="bg-accent text-accent-foreground px-4 py-2 rounded-full font-semibold hover:bg-accent/90 transition duration-300 shadow-md text-xs sm:text-sm w-full sm:w-auto"
           asChild
         >
-          <Link href="#"> {/* TODO: Update this link as needed */}
-            Cambiar a Ingenieria Geológica
+          <Link href="https://geologicaunap.com" target="_blank" rel="noopener noreferrer">
+            Cambiar a Ingeniería Geológica
           </Link>
         </Button>
       </div>

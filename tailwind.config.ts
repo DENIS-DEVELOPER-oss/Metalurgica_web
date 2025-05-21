@@ -9,6 +9,10 @@ export default {
   ],
   theme: {
   	extend: {
+      fontFamily: {
+        sans: ['var(--font-roboto)', 'sans-serif'],
+        serif: ['var(--font-merriweather)', 'serif'],
+      },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
@@ -50,6 +54,19 @@ export default {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			},
+        'top-bar': {
+          DEFAULT: 'hsl(var(--top-bar-bg))',
+          foreground: 'hsl(var(--top-bar-text))',
+          hover: 'hsl(var(--top-bar-hover-text))',
+        },
+        header: {
+          'text-muted': 'hsl(var(--header-text-muted))',
+          'text-bold': 'hsl(var(--header-text-bold))',
+        },
+        nav: {
+          text: 'hsl(var(--nav-text))',
+          'hover-text': 'hsl(var(--nav-hover-text))',
+        },
   			sidebar: {
   				DEFAULT: 'hsl(var(--sidebar-background))',
   				foreground: 'hsl(var(--sidebar-foreground))',
@@ -87,7 +104,11 @@ export default {
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out'
-  		}
+  		},
+      backgroundImage: {
+        // Example, if 'images/fondo1.jpg' is placed in public/images/fondo1.jpg
+        // 'hero-pattern': "url('/images/fondo1.jpg')",
+      }
   	}
   },
   plugins: [require("tailwindcss-animate")],

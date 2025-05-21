@@ -6,18 +6,18 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Users, Landmark, Building2, Network, Award, FlaskConical, Handshake, Globe, UsersRound, CheckCircle } from 'lucide-react';
 
 const topNavItems = [
-  { title: 'Autoridades', icon: <Users className="h-8 w-8 text-primary" />, href: '/nuestra-informacion/autoridades' },
-  { title: 'Consejo de Facultad', icon: <Landmark className="h-8 w-8 text-primary" />, href: '/nuestra-informacion/consejo-facultad' },
-  { title: 'Infraestructura', icon: <Building2 className="h-8 w-8 text-primary" />, href: '/nuestra-informacion/infraestructura' },
-  { title: 'Organigrama', icon: <Network className="h-8 w-8 text-primary" />, href: '/nuestra-informacion/organigrama' },
+  { title: 'Autoridades', icon: <Users className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300 ease-in-out" />, href: '/nuestra-informacion/autoridades' },
+  { title: 'Consejo de Facultad', icon: <Landmark className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300 ease-in-out" />, href: '/nuestra-informacion/consejo-facultad' },
+  { title: 'Infraestructura', icon: <Building2 className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300 ease-in-out" />, href: '/nuestra-informacion/infraestructura' },
+  { title: 'Organigrama', icon: <Network className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300 ease-in-out" />, href: '/nuestra-informacion/organigrama' },
 ];
 
 const whyChooseUsItems = [
-  { text: 'Programa acreditado por ICACIT', icon: <Award className="h-5 w-5 text-accent mr-3" /> },
-  { text: 'Laboratorios equipados con tecnología de punta', icon: <FlaskConical className="h-5 w-5 text-accent mr-3" /> },
-  { text: 'Estrecha colaboración con la industria minera y metalúrgica', icon: <Handshake className="h-5 w-5 text-accent mr-3" /> },
-  { text: 'Oportunidades de intercambio internacional', icon: <Globe className="h-5 w-5 text-accent mr-3" /> },
-  { text: 'Comunidad estudiantil diversa y dinámica', icon: <UsersRound className="h-5 w-5 text-accent mr-3" /> },
+  { text: 'Programa acreditado por ICACIT', icon: <Award className="h-5 w-5 text-accent mr-3 flex-shrink-0" /> },
+  { text: 'Laboratorios equipados con tecnología de punta', icon: <FlaskConical className="h-5 w-5 text-accent mr-3 flex-shrink-0" /> },
+  { text: 'Estrecha colaboración con la industria minera y metalúrgica', icon: <Handshake className="h-5 w-5 text-accent mr-3 flex-shrink-0" /> },
+  { text: 'Oportunidades de intercambio internacional', icon: <Globe className="h-5 w-5 text-accent mr-3 flex-shrink-0" /> },
+  { text: 'Comunidad estudiantil diversa y dinámica', icon: <UsersRound className="h-5 w-5 text-accent mr-3 flex-shrink-0" /> },
 ];
 
 const careerCompanies = [
@@ -36,8 +36,8 @@ export default function NuestraInformacionSection() {
         {/* Top Navigation Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 md:mb-16">
           {topNavItems.map((item) => (
-            <Link href={item.href} key={item.title}>
-              <Card className="text-center hover:shadow-lg transition-shadow duration-300 cursor-pointer h-full flex flex-col justify-center items-center py-6">
+            <Link href={item.href} key={item.title} className="group">
+              <Card className="text-center hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer h-full flex flex-col justify-center items-center py-6 transform hover:-translate-y-1 hover:bg-primary/5">
                 <CardContent className="p-4 flex flex-col items-center gap-3">
                   {item.icon}
                   <p className="text-lg font-semibold text-primary">{item.title}</p>
@@ -50,7 +50,7 @@ export default function NuestraInformacionSection() {
         {/* Main Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 items-start">
           {/* Director's Message - Spans 1 column on md, full width on sm */}
-          <Card className="md:col-span-1 shadow-xl">
+          <Card className="md:col-span-1 shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
             <CardHeader>
               <CardTitle className="text-2xl text-primary">Mensaje del Director</CardTitle>
             </CardHeader>
@@ -68,7 +68,7 @@ export default function NuestraInformacionSection() {
               <p className="text-muted-foreground">
                 En nombre de nuestra comunidad académica, les damos la más cordial bienvenida a la Escuela Profesional de Ingeniería Metalúrgica de la Universidad Nacional del Altiplano. Nuestra misión es formar profesionales altamente calificados, éticos y comprometidos con el desarrollo sostenible de nuestra región y país.
               </p>
-              <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-colors duration-300">
                 <Link href="#">Leer más</Link>
               </Button>
             </CardContent>
@@ -76,7 +76,7 @@ export default function NuestraInformacionSection() {
 
           {/* Right Column - Spans 2 columns on md, full width on sm */}
           <div className="md:col-span-2 space-y-8">
-            <Card className="shadow-xl">
+            <Card className="shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary">¿Por qué elegirnos?</CardTitle>
               </CardHeader>
@@ -92,7 +92,7 @@ export default function NuestraInformacionSection() {
               </CardContent>
             </Card>
 
-            <Card className="shadow-xl">
+            <Card className="shadow-xl hover:shadow-2xl transition-shadow duration-300 ease-in-out">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary">Perspectivas de Carrera</CardTitle>
               </CardHeader>
@@ -108,7 +108,7 @@ export default function NuestraInformacionSection() {
                     </li>
                   ))}
                 </ul>
-                <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button asChild className="w-full bg-primary hover:bg-primary/90 text-primary-foreground transition-colors duration-300">
                   <Link href="#">Ver más oportunidades</Link>
                 </Button>
               </CardContent>

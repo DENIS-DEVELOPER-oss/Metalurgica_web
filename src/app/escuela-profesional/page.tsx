@@ -5,10 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Target, GraduationCap, UserCheck, BookOpen, Star, FlaskConical, Handshake, Award, Rocket } from 'lucide-react';
 
 const navItems = [
-  { title: 'Misión y Visión', icon: <Target className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />, href: '/escuela-profesional/mision-vision', bgColor: 'bg-blue-100', textColor: 'text-blue-700', hoverBgColor: 'hover:bg-blue-200' },
-  { title: 'Objetivos Educacionales', icon: <GraduationCap className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />, href: '/escuela-profesional/objetivos-educacionales', bgColor: 'bg-green-100', textColor: 'text-green-700', hoverBgColor: 'hover:bg-green-200' },
-  { title: 'Perfil del Egresado', icon: <UserCheck className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />, href: '/escuela-profesional/perfil-egresado', bgColor: 'bg-yellow-100', textColor: 'text-yellow-700', hoverBgColor: 'hover:bg-yellow-200' },
-  { title: 'Recursos', icon: <BookOpen className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />, href: '/escuela-profesional/recursos', bgColor: 'bg-purple-100', textColor: 'text-purple-700', hoverBgColor: 'hover:bg-purple-200' },
+  { title: 'Misión y Visión', icon: <Target className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300 ease-in-out" />, href: '/escuela-profesional/mision-vision', bgColor: 'bg-primary/10', textColor: 'text-primary', hoverBgColor: 'hover:bg-primary/20' },
+  { title: 'Objetivos Educacionales', icon: <GraduationCap className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300 ease-in-out" />, href: '/escuela-profesional/objetivos-educacionales', bgColor: 'bg-green-100 dark:bg-green-900/30', textColor: 'text-green-700 dark:text-green-400', hoverBgColor: 'hover:bg-green-200 dark:hover:bg-green-800/40' },
+  { title: 'Perfil del Egresado', icon: <UserCheck className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300 ease-in-out" />, href: '/escuela-profesional/perfil-egresado', bgColor: 'bg-yellow-100 dark:bg-yellow-900/30', textColor: 'text-yellow-700 dark:text-yellow-400', hoverBgColor: 'hover:bg-yellow-200 dark:hover:bg-yellow-800/40' },
+  { title: 'Recursos', icon: <BookOpen className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300 ease-in-out" />, href: '/escuela-profesional/recursos', bgColor: 'bg-purple-100 dark:bg-purple-900/30', textColor: 'text-purple-700 dark:text-purple-400', hoverBgColor: 'hover:bg-purple-200 dark:hover:bg-purple-800/40' },
 ];
 
 const historyEvents = [
@@ -63,13 +63,13 @@ export default function EscuelaProfesionalPage() {
 
       <nav className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-16">
         {navItems.map((item) => (
-          <Link href={item.href} key={item.title}>
-            <Card className={`text-center ${item.hoverBgColor} transition-all duration-300 shadow-lg hover:shadow-xl cursor-pointer h-full flex flex-col justify-center items-center group`}>
+          <Link href={item.href} key={item.title} className="group">
+            <Card className={`text-center ${item.hoverBgColor} transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-1 h-full flex flex-col justify-center items-center`}>
               <CardContent className="p-6 flex flex-col items-center gap-3">
-                <div className={`p-3 rounded-full ${item.bgColor} mb-2`}>
+                <div className={`p-3 rounded-full ${item.bgColor} mb-2 transition-colors duration-300 ease-in-out`}>
                   {item.icon}
                 </div>
-                <span className={`font-semibold ${item.textColor}`}>{item.title}</span>
+                <span className={`font-semibold ${item.textColor} transition-colors duration-300 ease-in-out`}>{item.title}</span>
               </CardContent>
             </Card>
           </Link>
@@ -84,15 +84,15 @@ export default function EscuelaProfesionalPage() {
           
           <div className="space-y-12">
             {historyEvents.map((event, index) => (
-              <div key={index} className="relative flex flex-col md:flex-row items-center">
+              <div key={index} className="relative flex flex-col md:flex-row items-center group">
                 {/* Timeline Dot */}
-                <div className={`absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full ${event.bgColor} flex items-center justify-center shadow-md border-4 border-background`}>
+                <div className={`absolute left-1/2 top-0 md:top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full ${event.bgColor} flex items-center justify-center shadow-md border-4 border-background transition-all duration-300 ease-in-out group-hover:scale-110 group-hover:ring-4 group-hover:ring-primary/30`}>
                   {event.icon}
                 </div>
 
                 {/* Content Card - Conditional alignment */}
                 <div className={`w-full md:w-2/5 p-1 ${event.align === 'left' ? 'md:mr-auto md:pr-8 text-left' : 'md:ml-auto md:pl-8 text-left md:text-right'}`}>
-                  <Card className="bg-card shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                  <Card className="bg-card shadow-xl hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
                     <CardContent className="p-6">
                       <h3 className={`text-xl font-semibold text-primary mb-2`}>{event.year}</h3>
                       <p className="text-muted-foreground">{event.description}</p>

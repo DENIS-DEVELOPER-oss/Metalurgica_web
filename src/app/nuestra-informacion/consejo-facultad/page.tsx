@@ -33,7 +33,7 @@ export default function ConsejoFacultadPage() {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6 min-h-[calc(100vh-14rem)]">
       <div className="mb-8">
-        <Link href="/nuestra-informacion" className="inline-flex items-center text-primary hover:underline text-base font-medium">
+        <Link href="/nuestra-informacion" className="inline-flex items-center text-primary hover:underline text-base font-medium hover:text-primary/80 transition-colors">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Volver a Nuestra Información
         </Link>
@@ -45,14 +45,14 @@ export default function ConsejoFacultadPage() {
         <Separator className="my-4" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {docentesPrincipales.map((docente, index) => (
-            <Card key={index} className="text-center shadow-md rounded-lg overflow-hidden flex flex-col h-full bg-card">
-              <div className="bg-muted p-4 flex justify-center items-center aspect-[3/4]">
+            <Card key={index} className="text-center shadow-lg rounded-lg overflow-hidden flex flex-col h-full bg-card hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 group">
+              <div className="bg-muted p-4 flex justify-center items-center aspect-[3/4] overflow-hidden">
                 <Image
                   src={docente.imageUrl}
                   alt={`Foto de ${docente.name}`}
                   width={150}
                   height={200}
-                  className="object-contain"
+                  className="object-contain group-hover:scale-105 transition-transform duration-300 ease-in-out"
                   data-ai-hint={docente.imageHint}
                 />
               </div>
@@ -69,14 +69,14 @@ export default function ConsejoFacultadPage() {
         <Separator className="my-4" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {docentesAsociados.map((docente, index) => (
-            <Card key={index} className="text-center shadow-md rounded-lg overflow-hidden flex flex-col h-full bg-card">
-               <div className="bg-muted p-4 flex justify-center items-center aspect-[3/4]">
+            <Card key={index} className="text-center shadow-lg rounded-lg overflow-hidden flex flex-col h-full bg-card hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 group">
+               <div className="bg-muted p-4 flex justify-center items-center aspect-[3/4] overflow-hidden">
                 <Image
                   src={docente.imageUrl}
                   alt={`Foto de ${docente.name}`}
                   width={150}
                   height={200}
-                  className="object-contain"
+                  className="object-contain group-hover:scale-105 transition-transform duration-300 ease-in-out"
                   data-ai-hint={docente.imageHint}
                 />
               </div>
@@ -93,14 +93,14 @@ export default function ConsejoFacultadPage() {
         <Separator className="my-4" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {estudiantes.map((estudiante, index) => (
-            <Card key={index} className="text-center shadow-md rounded-lg overflow-hidden flex flex-col h-full bg-card">
-              <div className="bg-muted p-4 flex justify-center items-center aspect-[3/4]">
+            <Card key={index} className="text-center shadow-lg rounded-lg overflow-hidden flex flex-col h-full bg-card hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 group">
+              <div className="bg-muted p-4 flex justify-center items-center aspect-[3/4] overflow-hidden">
                 <Image
                   src={estudiante.imageUrl}
                   alt={`Foto de ${estudiante.name}`}
                   width={150}
                   height={200}
-                  className="object-contain"
+                  className="object-contain group-hover:scale-105 transition-transform duration-300 ease-in-out"
                   data-ai-hint={estudiante.imageHint}
                 />
               </div>

@@ -21,7 +21,7 @@ export default function AutoridadesPage() {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6 min-h-[calc(100vh-14rem)]">
       <div className="mb-8">
-        <Link href="/nuestra-informacion" className="inline-flex items-center text-primary hover:underline text-base font-medium">
+        <Link href="/nuestra-informacion" className="inline-flex items-center text-primary hover:underline text-base font-medium hover:text-primary/80 transition-colors">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Volver a Nuestra Información
         </Link>
@@ -29,14 +29,14 @@ export default function AutoridadesPage() {
       <h1 className="text-3xl font-bold text-primary mb-10 text-center">Autoridades</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {authorities.map((authority, index) => (
-          <Card key={index} className="text-center shadow-md rounded-lg overflow-hidden flex flex-col h-full bg-card">
-            <div className="bg-muted p-4 flex justify-center items-center aspect-[4/3] object-contain">
+          <Card key={index} className="text-center shadow-lg rounded-lg overflow-hidden flex flex-col h-full bg-card hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 group">
+            <div className="bg-muted p-4 flex justify-center items-center aspect-[4/3] overflow-hidden">
               <Image
                 src={authority.imageUrl}
                 alt={`Foto de ${authority.name}`}
                 width={100}
                 height={100}
-                className="object-contain"
+                className="object-contain group-hover:scale-105 transition-transform duration-300 ease-in-out"
                 data-ai-hint={authority.imageHint}
               />
             </div>

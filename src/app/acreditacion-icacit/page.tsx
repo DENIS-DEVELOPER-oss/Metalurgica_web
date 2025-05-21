@@ -67,10 +67,10 @@ export default function AcreditacionIcacitPage() {
   ];
 
   const accreditationBenefits = [
-    { title: "Reconocimiento de Calidad", description: "Garantía de que nuestro programa cumple con estándares internacionales de calidad.", icon: <Award className="h-10 w-10 text-yellow-500 mb-4" /> },
-    { title: "Mejores Oportunidades para Graduados", description: "Mayor reconocimiento y oportunidades laborales para nuestros egresados.", icon: <GraduationCap className="h-10 w-10 text-blue-500 mb-4" /> },
-    { title: "Mejora Continua", description: "Compromiso con la evaluación y mejora constante de nuestro programa.", icon: <RefreshCcw className="h-10 w-10 text-green-500 mb-4" /> },
-    { title: "Reconocimiento Internacional", description: "Facilita la movilidad académica y profesional a nivel internacional.", icon: <Globe className="h-10 w-10 text-purple-500 mb-4" /> },
+    { title: "Reconocimiento de Calidad", description: "Garantía de que nuestro programa cumple con estándares internacionales de calidad.", icon: <Award className="h-10 w-10 text-yellow-500 mb-4 group-hover:scale-110 transition-transform" /> },
+    { title: "Mejores Oportunidades para Graduados", description: "Mayor reconocimiento y oportunidades laborales para nuestros egresados.", icon: <GraduationCap className="h-10 w-10 text-blue-500 mb-4 group-hover:scale-110 transition-transform" /> },
+    { title: "Mejora Continua", description: "Compromiso con la evaluación y mejora constante de nuestro programa.", icon: <RefreshCcw className="h-10 w-10 text-green-500 mb-4 group-hover:scale-110 transition-transform" /> },
+    { title: "Reconocimiento Internacional", description: "Facilita la movilidad académica y profesional a nivel internacional.", icon: <Globe className="h-10 w-10 text-purple-500 mb-4 group-hover:scale-110 transition-transform" /> },
   ];
 
   return (
@@ -78,7 +78,7 @@ export default function AcreditacionIcacitPage() {
       <h1 className="text-4xl font-bold text-foreground mb-10 text-center">Acreditación ICACIT</h1>
 
       <section className="mb-12">
-        <Card className="shadow-lg">
+        <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
           <CardHeader>
             <CardTitle className="text-2xl text-primary">Acerca de ICACIT</CardTitle>
           </CardHeader>
@@ -92,7 +92,7 @@ export default function AcreditacionIcacitPage() {
     
       <section className="mb-12">
         <h2 className="text-3xl font-bold text-foreground mb-6">Información de Acreditación ICACIT en la UNA-Puno</h2>
-        <Card className="shadow-lg p-6 mb-8">
+        <Card className="shadow-lg p-6 mb-8 hover:shadow-xl transition-shadow duration-300 ease-in-out">
           <CardHeader className="p-0 pb-4">
             <CardTitle className="text-2xl text-primary">Datos Institucionales</CardTitle>
           </CardHeader>
@@ -102,14 +102,14 @@ export default function AcreditacionIcacitPage() {
               <li><strong className="font-semibold text-foreground">Ciudad:</strong> Puno</li>
               <li><strong className="font-semibold text-foreground">Campus:</strong> Ciudad Universitaria, Sede Puno</li>
               <li><strong className="font-semibold text-foreground">Dirección:</strong> Av. Floral 1153, Puno</li>
-              <li><strong className="font-semibold text-foreground">Página Web:</strong> <Link href="http://www.portal.unap.edu.pe" target="_blank" className="text-primary hover:underline">www.portal.unap.edu.pe</Link></li>
-              <li><strong className="font-semibold text-foreground">Programas Acreditados ICACIT:</strong> <Link href="https://webicacit.com/es/acreditacion/programas-acreditados" target="_blank" className="text-primary hover:underline">Ver lista oficial</Link></li>
+              <li><strong className="font-semibold text-foreground">Página Web:</strong> <Link href="http://www.portal.unap.edu.pe" target="_blank" className="text-primary hover:underline hover:text-primary/80 transition-colors">www.portal.unap.edu.pe</Link></li>
+              <li><strong className="font-semibold text-foreground">Programas Acreditados ICACIT:</strong> <Link href="https://webicacit.com/es/acreditacion/programas-acreditados" target="_blank" className="text-primary hover:underline hover:text-primary/80 transition-colors">Ver lista oficial</Link></li>
             </ul>
           </CardContent>
         </Card>
         
         <div className="overflow-x-auto">
-          <Table className="bg-card rounded-lg shadow-md">
+          <Table className="bg-card rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out">
             <TableHeader>
               <TableRow>
                 <TableHead className="text-foreground">Programa</TableHead>
@@ -121,7 +121,7 @@ export default function AcreditacionIcacitPage() {
             </TableHeader>
             <TableBody>
               {accreditationData.map((item, index) => (
-                <TableRow key={index} className={index % 2 === 0 ? 'bg-secondary/50' : 'bg-card'}>
+                <TableRow key={index} className={`${index % 2 === 0 ? 'bg-secondary/50' : 'bg-card'} hover:bg-muted/50 transition-colors duration-200`}>
                   <TableCell className="text-muted-foreground">{item.program}</TableCell>
                   <TableCell className="text-muted-foreground">{item.criterion}</TableCell>
                   <TableCell className="text-muted-foreground">{item.startDate}</TableCell>
@@ -140,10 +140,10 @@ export default function AcreditacionIcacitPage() {
         
         <div className="space-y-8">
           {accreditationProcess.map((phase, index) => (
-            <Card key={index} className="shadow-lg">
+            <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1">
               <CardHeader>
                 <div className="flex items-center">
-                  <div className={`rounded-full p-3 mr-4 ${phase.bgColor}`}>
+                  <div className={`rounded-full p-3 mr-4 ${phase.bgColor} transition-transform duration-300 group-hover:scale-110`}>
                     {phase.icon}
                   </div>
                   <CardTitle className="text-xl text-primary">{phase.title}</CardTitle>
@@ -165,9 +165,9 @@ export default function AcreditacionIcacitPage() {
         <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Beneficios de la Acreditación ICACIT</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {accreditationBenefits.map((benefit, index) => (
-            <Card key={index} className="p-6 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-shadow">
+            <Card key={index} className="p-6 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 group">
               {benefit.icon}
-              <CardTitle className="text-xl text-foreground mb-2">{benefit.title}</CardTitle>
+              <CardTitle className="text-xl text-foreground mb-2 group-hover:text-primary transition-colors">{benefit.title}</CardTitle>
               <CardContent className="text-muted-foreground text-sm p-0">
                 <p>{benefit.description}</p>
               </CardContent>
@@ -178,5 +178,3 @@ export default function AcreditacionIcacitPage() {
     </div>
   );
 }
-
-    

@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
   ChevronRight, Microscope, School, Users, BookOpen, GraduationCap, FlaskConical, Laptop, 
-  Mountain, Cog, Leaf, LineChart, ExternalLink, University, Info, CalendarDays, Layers, Languages, FileText, FilePdf 
+  Mountain, Cog, Leaf, LineChart, ExternalLink, University, Info, CalendarDays, Layers, Languages, FileText, File 
 } from 'lucide-react';
 
 const quickNavItems = [
@@ -203,7 +203,7 @@ export default function InvestigacionServiciosPage() {
             </div>
             <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
               <Link href="https://dialnet.unirioja.es/descarga/articulo/5319723.pdf" target="_blank" rel="noopener noreferrer">
-                <FilePdf className="mr-2 h-4 w-4" /> Texto completo (PDF)
+                <File className="mr-2 h-4 w-4" /> Texto completo (PDF)
               </Link>
             </Button>
           </CardContent>

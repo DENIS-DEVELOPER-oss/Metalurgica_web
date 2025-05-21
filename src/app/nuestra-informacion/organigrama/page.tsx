@@ -22,7 +22,7 @@ export default function OrganigramaPage() {
         <CardContent className="flex justify-center items-center p-4 md:p-8">
           <div className="w-full max-w-4xl">
             <Image
-              src="https://placehold.co/1200x800.png?text=Organigrama"
+              src="/images/organigrama.png"
               alt="Organigrama de la Escuela Profesional de Ingeniería Metalúrgica"
               width={1200}
               height={800}

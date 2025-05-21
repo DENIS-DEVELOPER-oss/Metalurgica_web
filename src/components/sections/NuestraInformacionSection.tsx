@@ -57,7 +57,7 @@ export default function NuestraInformacionSection() {
             <CardContent className="space-y-4">
               <div className="flex justify-center mb-4">
                 <Image
-                  src="https://placehold.co/200x250.png"
+                  src="/images/director.png"
                   alt="Director de la Escuela"
                   width={200}
                   height={250}

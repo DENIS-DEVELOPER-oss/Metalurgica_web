@@ -19,10 +19,10 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4 mt-4">
               <Link href="https://enlinea.sunedu.gob.pe/" target="_blank" rel="noopener noreferrer" className="hover:opacity-75 transition-opacity">
-                <Image src="https://placehold.co/100x40.png?text=SUNEDU" alt="SUNEDU" width={100} height={40} data-ai-hint="government logo education"/>
+                <Image src="/images/sune.png" alt="SUNEDU" width={100} height={40} data-ai-hint="government logo education"/>
               </Link>
               <Link href="https://www.gob.pe/sineace" target="_blank" rel="noopener noreferrer" className="hover:opacity-75 transition-opacity">
-                <Image src="https://placehold.co/100x40.png?text=SINEACE" alt="SINEACE" width={100} height={40} data-ai-hint="government logo education"/>
+                <Image src="/images/sinease.png" alt="SINEACE" width={100} height={40} data-ai-hint="government logo education"/>
               </Link>
             </div>
           </div>

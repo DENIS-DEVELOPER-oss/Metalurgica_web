@@ -42,7 +42,7 @@ export default function Header() {
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center">
             <Image 
-              src="https://placehold.co/100x64.png?text=Logo"
+              src="/images/meta.png"
               alt="Logo EPIM" 
               width={100}
               height={64}

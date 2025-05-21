@@ -51,7 +51,7 @@ export default function HeroSection() {
   return (
     <section className="relative w-full md:h-[700px] h-[50vh] flex items-center justify-center p-4 overflow-hidden">
       <Image
-        src="https://placehold.co/1920x1080.png?text=Fondo+Metalurgia" // Placeholder for images/fondo1.jpg
+        src="/images/fondo1.jpg" // Placeholder for images/fondo1.jpg
         alt="Fondo Hero Metalurgia"
         layout="fill"
         objectFit="cover"

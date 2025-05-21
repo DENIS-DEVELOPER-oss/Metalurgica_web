@@ -1,4 +1,4 @@
-
+// src/components/sections/LogrosEstudiantilesSection.tsx
 "use client";
 
 import React from 'react';
@@ -35,24 +35,23 @@ export default function LogrosEstudiantilesSection() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <Card className="lg:col-span-2 rounded-xl shadow-xl p-6 flex flex-col md:flex-row items-center transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 bg-card">
+          {/* MODIFICACIÓN: Quitado lg:items-start para que las tarjetas igualen altura */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6"> 
+            {/* MODIFICACIÓN: Añadido h-full a la tarjeta del estudiante */}
+            <Card className="lg:col-span-2 rounded-xl shadow-xl p-6 flex flex-col md:flex-row items-center transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 bg-card h-full">
               <div className="relative w-40 h-40 mb-4 md:mb-0 md:mr-6 overflow-hidden rounded-lg shadow-md flex-shrink-0">
                 <Image 
-                  src="https://placehold.co/200x200.png?text=Estudiante" 
+                  src="/images/renacyt/estudiante.jpg" 
                   alt="Estudiante RENACYT Alexander Aguilar Ramirez" 
                   width={200}
                   height={200}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   data-ai-hint="student portrait"
                 />
-                <div className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded-full shadow-md">
-                  RENACYT
-                </div>
               </div>
               
-              <div className="flex-grow">
-                <div className="relative inline-block mb-2">
+              <div className="flex-grow flex flex-col justify-center"> {/* Añadido flex flex-col justify-center para mejor distribución vertical del texto */}
+                <div className="relative inline-block mb-2 self-start md:self-auto"> {/* Alineación para el título */}
                   <h4 className="text-2xl font-bold text-foreground">Alexander Aguilar Ramirez</h4>
                   <div className="absolute -bottom-1 left-0 h-1 w-1/2 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"></div>
                 </div>
@@ -79,7 +78,7 @@ export default function LogrosEstudiantilesSection() {
                   </p>
                 </div>
                 
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 mt-auto"> {/* mt-auto para empujar botones abajo si hay espacio */}
                   <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transform hover:-translate-y-px duration-300">
                     <Link href="https://directorio.concytec.gob.pe/appDirectorioCTI/VerDatosInvestigador.do?id_investigador=000000000000000000000000" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="mr-2 h-4 w-4" /> Ver CV en CTI Vitae
@@ -94,8 +93,9 @@ export default function LogrosEstudiantilesSection() {
               </div>
             </Card>
             
+            {/* MODIFICACIÓN: Añadido flex flex-col h-full a la tarjeta RENACYT */}
             <Card 
-              className="rounded-xl shadow-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 bg-card"
+              className="rounded-xl shadow-xl overflow-hidden group cursor-pointer transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 bg-card flex flex-col h-full"
               onClick={() => setIsRenacytModalOpen(true)}
             >
               <CardHeader className="bg-primary text-primary-foreground p-4">
@@ -107,13 +107,15 @@ export default function LogrosEstudiantilesSection() {
                   Registro Nacional de Ciencia, Tecnología e Innovación Tecnológica
                 </p>
               </CardHeader>
-              <CardContent className="p-4 relative overflow-hidden">
-                <div className="relative w-full aspect-[4/5.6] group-hover:opacity-90 transition-opacity duration-300"> {/* Aspect ratio similar to 400x560 */}
+              {/* MODIFICACIÓN: Añadido flex-grow flex flex-col para que el contenido se expanda */}
+              <CardContent className="p-4 relative overflow-hidden flex-grow flex flex-col"> 
+                {/* MODIFICACIÓN: Cambiado aspect-[4/5.6] a h-96 (o la altura que prefieras) y flex-shrink-0 */}
+                <div className="relative w-full h-96 group-hover:opacity-90 transition-opacity duration-300 flex-shrink-0"> 
                   <Image 
-                    src="/images/renacyt/ficha-alexander-aguilar.png" 
+                    src="/images/renacyt/ficha.jpeg" 
                     alt="Ficha RENACYT de Alexander Aguilar Ramirez" 
                     layout="fill"
-                    objectFit="contain"
+                    objectFit="contain" 
                     className="rounded-lg"
                   />
                 </div>
@@ -127,7 +129,7 @@ export default function LogrosEstudiantilesSection() {
                   <ZoomIn className="h-5 w-5" />
                 </Button>
               </CardContent>
-              <div className="p-4 bg-gray-50 dark:bg-slate-800">
+              <div className="p-4 bg-gray-50 dark:bg-slate-800 mt-auto"> {/* mt-auto para el footer */}
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm text-muted-foreground">Registro: 2025</span>
                   <span className="text-sm text-green-600 dark:text-green-400 flex items-center">
@@ -148,7 +150,7 @@ export default function LogrosEstudiantilesSection() {
               { icon: <Award />, title: "Reconocimientos", text: "Investigador RENACYT Nivel VII, Mérito a la Excelencia Académica", color: "green" },
               { icon: <BookOpen />, title: "Publicaciones", text: "Capítulos de libro científicos en revistas indexadas, Software de simulación de procesos registrados en INDECOPI", color: "purple" }
             ].map((item, index) => (
-              <Card key={index} className={`p-4 rounded-lg shadow-md flex items-start hover:shadow-lg transition-shadow bg-card`}>
+              <Card key={index} className={`p-3 rounded-lg shadow-md flex items-start hover:shadow-lg transition-shadow bg-card`}>
                 <div className={`bg-${item.color}-100 text-${item.color}-600 dark:bg-${item.color}-900/30 dark:text-${item.color}-400 p-3 rounded-full mr-3`}>
                   {React.cloneElement(item.icon as React.ReactElement, { className: `h-5 w-5 text-${item.color}-600 dark:text-${item.color}-400`})}
                 </div>
@@ -163,20 +165,21 @@ export default function LogrosEstudiantilesSection() {
       </section>
 
       <Dialog open={isRenacytModalOpen} onOpenChange={setIsRenacytModalOpen}>
+        {/* ... (contenido del Dialog sin cambios) ... */}
         <DialogContent className="sm:max-w-3xl md:max-w-4xl lg:max-w-5xl max-h-[90vh] p-0 bg-background border-border flex flex-col">
-          <DialogHeader className="p-4 border-b border-border">
+          <DialogHeader className="p-3 border-b border-border">
             <DialogTitle className="text-primary">Ficha RENACYT - Alexander Aguilar Ramirez</DialogTitle>
             <DialogDescription>Documento oficial de CONCYTEC que acredita al investigador.</DialogDescription>
           </DialogHeader>
           <div className="p-4 flex-grow overflow-auto flex justify-center items-center">
             <div className="relative max-w-full max-h-full">
               <Image 
-                src="/images/renacyt/ficha-alexander-aguilar.png" 
+                src="/images/renacyt/ficha.JPEG" 
                 alt="Ficha RENACYT Ampliada de Alexander Aguilar Ramirez" 
-                width={1083} // original width from OCR'd image for aspect ratio
-                height={793} // original height from OCR'd image
+                width={1083} 
+                height={793} 
                 objectFit="contain"
-                className="max-w-full max-h-[calc(80vh-100px)] rounded-md shadow-lg" // Adjusted max-h to account for header/footer
+                className="max-w-full max-h-[calc(80vh-100px)] rounded-md shadow-lg"
               />
             </div>
           </div>

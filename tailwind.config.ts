@@ -107,7 +107,7 @@ export default {
   		},
       backgroundImage: {
         // Example, if 'images/fondo1.jpg' is placed in public/images/fondo1.jpg
-        // 'hero-pattern': "url('/images/fondo1.jpg')",
+         'hero-pattern': "url('/images/fondo1.jpg')",
       }
   	}
   },

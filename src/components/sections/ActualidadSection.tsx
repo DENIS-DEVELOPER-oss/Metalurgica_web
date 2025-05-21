@@ -13,7 +13,7 @@ const newsItemsData = [
     title: "Avances en fabricación de aleaciones de alta entropía por impresión 3D",
     category: "Procesamiento de Materiales",
     description: "Estudio sobre desarrollos recientes en la fabricación aditiva de aleaciones de alta entropía, explorando sus propiedades y aplicaciones en industrias aeroespacial y energética.",
-    imageUrl: "https://placehold.co/600x400.png?text=Aleaciones+3D",
+    imageUrl: "/images/news1.jpg",
     imageHint: "3d printing metal",
     link: "https://www.sciencedirect.com/science/article/abs/pii/S0921509323008146"
   },
@@ -21,7 +21,7 @@ const newsItemsData = [
     title: "Superconductividad a temperatura ambiente en nuevos hidruros",
     category: "Ciencia de Materiales",
     description: "Investigadores descubren superconductividad a temperatura ambiente en hidruros de tierras raras, abriendo posibilidades para la transmisión de energía sin pérdidas.",
-    imageUrl: "https://placehold.co/600x400.png?text=Superconductividad",
+    imageUrl: "/images/news2.jpg",
     imageHint: "abstract science materials",
     link: "https://www.nature.com/articles/s41586-023-06004-9"
   },
@@ -29,7 +29,7 @@ const newsItemsData = [
     title: "Nuevas técnicas para mejorar propiedades de aleaciones de titanio",
     category: "Metalurgia Avanzada",
     description: "Estudio presenta técnicas innovadoras de procesamiento termomecánico para mejorar la resistencia y ductilidad de aleaciones de titanio, con aplicaciones en industrias aeroespacial y biomédica.",
-    imageUrl: "https://placehold.co/600x400.png?text=Titanio",
+    imageUrl: "/images/news3.jpg",
     imageHint: "titanium alloy medical",
     link: "https://www.sciencedirect.com/science/article/abs/pii/S0921509323007700"
   },
@@ -37,7 +37,7 @@ const newsItemsData = [
     title: "Reciclaje eficiente de metales raros de residuos electrónicos",
     category: "Sostenibilidad en Metalurgia",
     description: "Nuevo proceso hidrometalúrgico para recuperar metales raros de residuos electrónicos, contribuyendo a la economía circular y la conservación de recursos.",
-    imageUrl: "https://placehold.co/600x400.png?text=Reciclaje+Metales",
+    imageUrl: "/images/news4.jpg",
     imageHint: "recycling electronics",
     link: "https://www.sciencedirect.com/science/article/abs/pii/S0921509323006755"
   },
@@ -45,7 +45,7 @@ const newsItemsData = [
     title: "Nanopartículas metálicas para catálisis avanzada",
     category: "Nanotecnología",
     description: "Equipo internacional diseña nanopartículas metálicas con estructura controlada que muestran actividad catalítica excepcional, prometiendo avances en la industria química y producción de energía limpia.",
-    imageUrl: "https://placehold.co/600x400.png?text=Nanoparticulas",
+    imageUrl: "/images/news5.jpg",
     imageHint: "nanotechnology abstract",
     link: "https://www.nature.com/articles/s41563-023-01508-1"
   },
@@ -53,7 +53,7 @@ const newsItemsData = [
     title: "Recubrimientos metálicos avanzados contra la corrosión",
     category: "Ingeniería de Superficies",
     description: "Científicos desarrollan recubrimientos metálicos multicapa que ofrecen protección excepcional contra la corrosión en ambientes extremos, con aplicaciones en industrias marinas y químicas.",
-    imageUrl: "https://placehold.co/600x400.png?text=Corrosion",
+    imageUrl: "/images/news6.jpg",
     imageHint: "metal corrosion protection",
     link: "https://www.sciencedirect.com/science/article/abs/pii/S1359645423003129"
   }

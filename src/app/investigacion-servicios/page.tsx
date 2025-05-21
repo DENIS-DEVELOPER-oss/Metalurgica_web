@@ -42,16 +42,16 @@ const researchLines = [
 ];
 
 const academicEnvironments = [
-  { title: 'Aula Moderna', description: 'Espacios equipados con la última tecnología para un aprendizaje efectivo.', imageUrl: 'https://placehold.co/600x400.png', imageHint: 'modern classroom technology' },
-  { title: 'Laboratorio Equipado', description: 'Instalaciones de vanguardia para la investigación y práctica experimental.', imageUrl: 'https://placehold.co/600x400.png', imageHint: 'science laboratory equipment' },
-  { title: 'Biblioteca Especializada', description: 'Amplia colección de recursos para el estudio y la investigación en metalurgia.', imageUrl: 'https://placehold.co/600x400.png', imageHint: 'university library books' },
+  { title: 'Aula Moderna', description: 'Espacios equipados con la última tecnología para un aprendizaje efectivo.', imageUrl: '/images/aula1.jpg', imageHint: 'modern classroom technology' },
+  { title: 'Laboratorio Equipado', description: 'Instalaciones de vanguardia para la investigación y práctica experimental.', imageUrl: '/images/laboratorio1.jpg', imageHint: 'science laboratory equipment' },
+  { title: 'Biblioteca Especializada', description: 'Amplia colección de recursos para el estudio y la investigación en metalurgia.', imageUrl: '/images/biblioteca.jpg', imageHint: 'university library books' },
 ];
 
 const researchers = [
   {
     name: 'Dr. SARMIENTO SARMIENTO ANTONIO WALTER',
     role: 'Director del Departamento académico de la escuela profesional de Ingeniería Metalúrgica',
-    imageUrl: 'https://placehold.co/96x96.png',
+    imageUrl: '/images/investigador1.jpg',
     imageHint: 'researcher portrait',
     details: [
       { text: 'Ph.D. en Ingeniería Metalúrgica', icon: <GraduationCap className="h-5 w-5 text-primary mr-2" /> },
@@ -63,7 +63,7 @@ const researchers = [
   {
     name: 'Dr. CHAVEZ GUTIERREZ ESTEBAN REY',
     role: 'Docente y Director del Programa de Maestría en Extracción de Metales Estratégicos',
-    imageUrl: 'https://placehold.co/96x96.png',
+    imageUrl: '/images/investigador2.jpg',
     imageHint: 'researcher portrait',
     details: [
       { text: 'Coordinador de Tutoría', icon: <Users className="h-5 w-5 text-green-500 mr-2" /> },
@@ -75,9 +75,9 @@ const researchers = [
 ];
 
 const labs = [
-  { title: 'Laboratorio de Metalografía', description: 'Equipado para el análisis microestructural de metales y aleaciones.', imageUrl: 'https://placehold.co/600x400.png', imageHint: 'metallography laboratory microscope' },
-  { title: 'Laboratorio de Fundición', description: 'Instalaciones para la fusión y moldeo de metales y aleaciones.', imageUrl: 'https://placehold.co/600x400.png', imageHint: 'foundry laboratory metal casting' },
-  { title: 'Laboratorio de Análisis Químico', description: 'Dotado con instrumentos para el análisis composicional de materiales.', imageUrl: 'https://placehold.co/600x400.png', imageHint: 'chemical analysis laboratory' },
+  { title: 'Laboratorio de Metalografía', description: 'Equipado para el análisis microestructural de metales y aleaciones.', imageUrl: '/images/lab-metalografia.jpg', imageHint: 'metallography laboratory microscope' },
+  { title: 'Laboratorio de Fundición', description: 'Instalaciones para la fusión y moldeo de metales y aleaciones.', imageUrl: '/images/lab-fundicion.jpg', imageHint: 'foundry laboratory metal casting' },
+  { title: 'Laboratorio de Análisis Químico', description: 'Dotado con instrumentos para el análisis composicional de materiales.', imageUrl: '/images/lab-analisis.jpg', imageHint: 'chemical analysis laboratory' },
 ];
 
 export default function InvestigacionServiciosPage() {

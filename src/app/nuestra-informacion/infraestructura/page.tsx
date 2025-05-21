@@ -31,10 +31,10 @@ const infrastructureData = [
 ];
 
 const galleryImages = [
-  { src: "https://placehold.co/600x400.png", alt: "Infraestructura 1", hint: "university building classroom" },
-  { src: "https://placehold.co/600x400.png", alt: "Infraestructura 2", hint: "university laboratory equipment" },
-  { src: "https://placehold.co/600x400.png", alt: "Infraestructura 3", hint: "modern university library" },
-  { src: "https://placehold.co/600x400.png", alt: "Infraestructura 4", hint: "university auditorium" },
+  { src: "/images/infraestructura1.jpg", alt: "Facultad", hint: "university building classroom" },
+  { src: "/images/infraestructura2.jpg", alt: "Facultad", hint: "university laboratory equipment" },
+  { src: "/images/infraestructura1.jpg", alt: "Facultad", hint: "modern university library" },
+  { src: "/images/infraestructura2.jpg", alt: "Facultad", hint: "university auditorium" },
 ];
 
 export default function InfraestructuraPage() {

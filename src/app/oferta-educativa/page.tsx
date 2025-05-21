@@ -10,25 +10,25 @@ const testimonials = [
   {
     quote: "La formación que recibí me permitió destacar en la industria desde el primer día.",
     author: "María Rodríguez, Ingeniera en Southern Copper",
-    imageUrl: "https://placehold.co/96x96.png",
+    imageUrl: "/images/student1.jpg",
     imageHint: "person portrait",
   },
   {
     quote: "Las prácticas en laboratorio fueron fundamentales para mi desarrollo profesional.",
     author: "Carlos Mendoza, Investigador en CONCYTEC",
-    imageUrl: "https://placehold.co/96x96.png",
+    imageUrl: "/images/student2.jpg",
     imageHint: "person portrait",
   },
   {
     quote: "Los proyectos de investigación me abrieron puertas en el ámbito académico internacional.",
     author: "Jorge Sánchez, Docente en la Universidad de São Paulo",
-    imageUrl: "https://placehold.co/96x96.png",
+    imageUrl: "/images/student3.jpg",
     imageHint: "person portrait",
   },
   {
     quote: "La formación en gestión ambiental ha sido crucial en mi rol actual en minería sostenible.",
     author: "Juan Quispe, Gerente Ambiental en Minera Antamina",
-    imageUrl: "https://placehold.co/96x96.png",
+    imageUrl: "/images/student4.jpg",
     imageHint: "person portrait",
   },
 ];

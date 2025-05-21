@@ -4,8 +4,8 @@ import { Microscope, GraduationCap, FlaskConical, Globe, Building2, User, Newspa
 import Link from 'next/link';
 
 const recursos = [
-  { title: "Investigadores", icon: <Microscope className="text-primary text-2xl mr-3" />, description: "Acceso a recursos y herramientas para apoyar tu investigación académica.", link: "#", linkText: "Explorar recursos" },
-  { title: "Futuros Estudiantes", icon: <GraduationCap className="text-primary text-2xl mr-3" />, description: "Información sobre programas, admisiones y vida estudiantil para aspirantes.", link: "#", linkText: "Descubre más" },
+  { title: "Investigadores", icon: <Microscope className="text-primary text-2xl mr-3" />, description: "Acceso a recursos y herramientas para apoyar tu investigación académica.", link: "https://biblioteca.concytec.gob.pe/", linkText: "Explorar recursos" },
+  { title: "Futuros Estudiantes", icon: <GraduationCap className="text-primary text-2xl mr-3" />, description: "Información sobre programas, admisiones y vida estudiantil para aspirantes.", link: "https://admision.unap.edu.pe/index", linkText: "Descubre más" },
   { title: "Personal Investigador en Formación", icon: <FlaskConical className="text-primary text-2xl mr-3" />, description: "Recursos para investigadores en etapas tempranas de su carrera académica.", link: "#", linkText: "Ver recursos" },
   { title: "Internacional", icon: <Globe className="text-primary text-2xl mr-3" />, description: "Información para estudiantes internacionales y oportunidades de intercambio.", link: "#", linkText: "Explorar opciones" },
   { title: "Empresas", icon: <Building2 className="text-primary text-2xl mr-3" />, description: "Colaboraciones, prácticas y oportunidades para el sector empresarial.", link: "#", linkText: "Conectar" },

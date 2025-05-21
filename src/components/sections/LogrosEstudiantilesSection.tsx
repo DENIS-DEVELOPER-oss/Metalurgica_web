@@ -174,7 +174,7 @@ export default function LogrosEstudiantilesSection() {
           <div className="p-4 flex-grow overflow-auto flex justify-center items-center">
             <div className="relative max-w-full max-h-full">
               <Image 
-                src="/images/renacyt/ficha.JPEG" 
+                src="/images/renacyt/ficha.jpeg" 
                 alt="Ficha RENACYT Ampliada de Alexander Aguilar Ramirez" 
                 width={1083} 
                 height={793} 

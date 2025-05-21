@@ -1,18 +1,18 @@
 
 import HeroSection from '@/components/sections/HeroSection';
-// Import other sections here as they are created/adapted
+import RecursosParaSection from '@/components/sections/RecursosParaSection';
+import EventosRealizadosSection from '@/components/sections/EventosRealizadosSection';
+import LogrosEstudiantilesSection from '@/components/sections/LogrosEstudiantilesSection';
+import ActualidadSection from '@/components/sections/ActualidadSection';
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      {/* 
-        Future sections from your HTML will be added here:
-        - RecursosParaSection
-        - EventosRealizadosSection (Cachimbos)
-        - LogrosEstudiantilesSection
-        - ActualidadSection 
-      */}
+      <RecursosParaSection />
+      <EventosRealizadosSection />
+      <LogrosEstudiantilesSection />
+      <ActualidadSection />
     </>
   );
 }

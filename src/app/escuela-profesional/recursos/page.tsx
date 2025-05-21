@@ -65,7 +65,7 @@ const recursos = [
     title: "Recursos para Empresas",
     icon: <Building className="h-10 w-10 text-primary mb-4 group-hover:scale-110 transition-transform" />,
     description: "Colaboraciones, servicios técnicos, talento y transferencia de tecnología para el sector empresarial.",
-    linkText: "Ver Recursos",
+    linkText: "Conectar →",
     href: "/escuela-profesional/recursos/empresas" 
   }
 ];
@@ -103,5 +103,3 @@ export default function RecursosPage() {
     </div>
   );
 }
-
-    
